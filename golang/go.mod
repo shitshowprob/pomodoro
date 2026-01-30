@@ -1,4 +1,4 @@
-module github.com/shitshowprob/pomodoro
+module github.com/shitshowprob/pomodoro/golang
 
 go 1.25.6
 
