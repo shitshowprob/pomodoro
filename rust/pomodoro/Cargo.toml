@@ -1,0 +1,9 @@
+[package]
+name = "pomodoro"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+color-eyre = "0.6.5"
+duration-string = "0.5.3"
+ratatui = "0.30.0"

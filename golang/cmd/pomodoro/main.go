@@ -14,7 +14,7 @@ import (
 )
 
 var (
-	titleStyle        = lipgloss.NewStyle().MarginLeft(2).PaddingTop(2)
+	titleStyle        = lipgloss.NewStyle().PaddingLeft(2).PaddingTop(2).AlignHorizontal(lipgloss.Left)
 	itemStyle         = lipgloss.NewStyle().PaddingLeft(4)
 	selectedItemStyle = lipgloss.NewStyle().PaddingLeft(2).Foreground(lipgloss.Color("170"))
 	timeStyle         = lipgloss.NewStyle().PaddingLeft(4).PaddingTop(2).Foreground(lipgloss.Color("205"))
@@ -72,6 +72,7 @@ func (m *model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
 	case tea.WindowSizeMsg:
 		m.List.SetWidth(msg.Width)
+		m.List.Styles.Title.Width(msg.Width)
 		return m, cmd
 	case tea.KeyMsg:
 		switch msg.String() {
